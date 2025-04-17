@@ -34,6 +34,7 @@ int main(int argc, char *argv[]) {
   for (i = 0; i < sizeof(data); i++) {
     data[i] = fgetc(filePointer);
   }
+  fclose(filePointer);
   data[i] = '\0';
 
   Pair uniquePairs[128];
