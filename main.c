@@ -29,7 +29,7 @@ int main(int argc, char *argv[]) {
   rewind(filePointer);
 
   // Move its contents into the buffer.
-  char data[characterCount];
+  char data[characterCount + sizeof(char)];
   int i;
   for (i = 0; i < sizeof(data); i++) {
     data[i] = fgetc(filePointer);
