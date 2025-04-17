@@ -31,7 +31,7 @@ int main(int argc, char *argv[]) {
   // Move its contents into the buffer.
   char data[characterCount + sizeof(char)];
   int i;
-  for (i = 0; i < sizeof(data); i++) {
+  for (i = 0; i < characterCount; i++) {
     data[i] = fgetc(filePointer);
   }
   fclose(filePointer);
